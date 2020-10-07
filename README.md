@@ -3,6 +3,7 @@
 [![Github_Status_Badge](https://img.shields.io/badge/Github-0.1-blue.svg)](https://github.com/nadpat1/gpbStat)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-orange.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![Build Status](https://travis-ci.org/eblondel/zen4R.svg?branch=master)](https://travis-ci.org/eblondel/zen4R)
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
 # gpbStat
 R package for analyzing plant breeding data
 
