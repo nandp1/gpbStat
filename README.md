@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/eblondel/zen4R.svg?branch=master)](https://travis-ci.org/eblondel/zen4R)
 [![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/nandp1/gpbStat/issues)
-
+[![HitCount](http://hits.dwyl.com/nandp1/gpbStat.svg)](http://hits.dwyl.com/nandp1/gpbStat)
 # gpbStat
 R package for analyzing plant breeding data
 
