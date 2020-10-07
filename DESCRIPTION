@@ -1,0 +1,14 @@
+Package: gpbStat
+Type: Package
+Title: Statistical Analysis for Plant Breeding
+Version: 0.1.0
+Author: Nandan L. Patil with contributions from Lakshmi R. Gangavati.
+Maintainer: Nandan L. Patil <tryanother609@gmail.com>
+Description: Statistical analysis of Plant Breeding data.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.0)
+Date: 2020-10-01
+URL: https://github.com/nandp1/Line-Tester-Analysis/ 
+RoxygenNote: 7.1.1
