@@ -3,20 +3,22 @@
 #' Used for analyzing the line x tester data containing only crosses laid out in RCBD design
 #'
 #' @param data dataframe containing following variables
-#' @param replication Number of replications
-#' @param line Number of lines
-#' @param tester Number of testers
-#' @param y a dependent variable
+#' @param replication number of replications
+#' @param line number of lines
+#' @param tester number of testers
+#' @param y trait of interest
 #'
-#' @return Results displayed
+#' @return Results of line by tester analysis
 #' @author Nandan Patil
-#' @details Analyzing the line by tester data only using the data from crosses which are evaluated in randomised complete block design.
+#' @details Analyzing the line by tester data containing only crosses which are evaluated in Randomized Complete Block Design (RCBD).
 #'
-#' @seealso \code{aov}
 #' @export
 #' @import stats
 #' @import graphics
-
+#'@examples library(gpbStat)
+#'data(rcbdlt)
+#'results2 = ltcrcbd(rcbdlt, replication, line, tester, yield)
+#'results2
 
 
 ltcrcbd <-
@@ -84,7 +86,7 @@ ltcrcbd <-
     matrix5 <- c(total1, total2, NA, NA, NA)
     matrix <- rbind(matrix, matrix5)
     matrix <- matrix[-3,]
-    rownames(matrix) <- c("Replications", "Crosses",
+    rownames(matrix) <- c("Replication", "Crosses",
                           "Lines", "Testers", "Lines X Testers",
                           "Error", "Total")
     # Picking the Error MSS

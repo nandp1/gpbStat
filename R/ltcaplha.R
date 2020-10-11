@@ -3,21 +3,23 @@
 #' Used for analyzing the line x tester data containing only crosses laid out in alpha lattice design
 #'
 #' @param data dataframe containing following variables
-#' @param replication Number of replications
-#' @param block Number of blocks per replication
-#' @param line Number of lines
-#' @param tester Number of testers
-#' @param y a dependent variable
+#' @param replication number of replications
+#' @param block number of blocks per replication
+#' @param line number of lines
+#' @param tester number of testers
+#' @param y a trait of interest
 #'
-#' @return Results displayed
+#' @return Results of line by tester analysis
 #' @author Nandan Patil
 #' @details Analyzing the line by tester data only using the data from crosses which are evaluated in alpha lattice design.
 #'
-#' @seealso \code{aov}
 #' @export
 #' @import stats
 #' @import graphics
-
+#'@examples library(gpbStat)
+#'data(alphalt)
+#'results1 = ltcalpha(alphalt, replication, block, line, tester, yield)
+#'results1
 
 
 ltcalpha <-
@@ -88,7 +90,7 @@ ltcalpha <-
     matrix5 <- c(total1, total2, NA, NA, NA)
     matrix <- rbind(matrix, matrix5)
     matrix <- matrix[-4,]
-        rownames(matrix) <- c("Replications", "Crosses", "Blocks within Replication",
+        rownames(matrix) <- c("Replication", "Crosses", "Blocks within Replication",
                           "Lines", "Testers", "Lines X Testers",
                           "Error", "Total")
 

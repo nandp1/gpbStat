@@ -1,0 +1,31 @@
+---
+title: "ltcrcbd"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ltcrcbd}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Line x Tester analysis (only crosses) laid out in Randamised Complete Block Design.
+
+
+```{r setup}
+library(gpbStat)
+
+## Loading inbuilt dataset
+data("rcbdlt")
+
+## Now by using function ltcalpha we analyze the data.
+results2 = ltcrcbd(rcbdlt, replication, line, tester, yield)
+
+## Viewing the results
+results2
+```

@@ -9,18 +9,18 @@ ltcalpha(data, block, replication, line, tester, y)
 \arguments{
 \item{data}{dataframe containing following variables}
 
-\item{block}{Number of blocks per replication}
+\item{block}{number of blocks per replication}
 
-\item{replication}{Number of replications}
+\item{replication}{number of replications}
 
-\item{line}{Number of lines}
+\item{line}{number of lines}
 
-\item{tester}{Number of testers}
+\item{tester}{number of testers}
 
-\item{y}{a dependent variable}
+\item{y}{a trait of interest}
 }
 \value{
-Results displayed
+Results of line by tester analysis
 }
 \description{
 Used for analyzing the line x tester data containing only crosses laid out in alpha lattice design
@@ -28,8 +28,11 @@ Used for analyzing the line x tester data containing only crosses laid out in al
 \details{
 Analyzing the line by tester data only using the data from crosses which are evaluated in alpha lattice design.
 }
-\seealso{
-\code{aov}
+\examples{
+library(gpbStat)
+data(alphalt)
+results1 = ltcalpha(alphalt, replication, block, line, tester, yield)
+results1
 }
 \author{
 Nandan Patil

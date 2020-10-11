@@ -9,25 +9,28 @@ ltcrcbd(data, replication, line, tester, y)
 \arguments{
 \item{data}{dataframe containing following variables}
 
-\item{replication}{Number of replications}
+\item{replication}{number of replications}
 
-\item{line}{Number of lines}
+\item{line}{number of lines}
 
-\item{tester}{Number of testers}
+\item{tester}{number of testers}
 
-\item{y}{a dependent variable}
+\item{y}{trait of interest}
 }
 \value{
-Results displayed
+Results of line by tester analysis
 }
 \description{
 Used for analyzing the line x tester data containing only crosses laid out in RCBD design
 }
 \details{
-Analyzing the line by tester data only using the data from crosses which are evaluated in randomised complete block design.
+Analyzing the line by tester data containing only crosses which are evaluated in Randomized Complete Block Design (RCBD).
 }
-\seealso{
-\code{aov}
+\examples{
+library(gpbStat)
+data(rcbdlt)
+results2 = ltcrcbd(rcbdlt, replication, line, tester, yield)
+results2
 }
 \author{
 Nandan Patil
