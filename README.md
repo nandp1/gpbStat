@@ -7,7 +7,7 @@
 
 <!-- badges: end -->
 
-The goal of gpbStat is to …
+The package is used for analyzing the various Plant Breeding experiments. 
 
 ## Installation
 
@@ -18,18 +18,28 @@ You can install the released version of gpbStat from
 install.packages("gpbStat")
 ```
 
+You can install the released version of gpbStat from
+[Github](https://github.com/nandp1/gpbStat) with:
+
+``` r
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("nandp1/gpbStat")
+```
+
 ## Example
 
 Sample example for RCBD analysis
 
 ```r
-
 library(gpbStat)
 
-## Load data
+# Loading data
+data(rcbdltc)
 
-data("alphalt")
+#Analysing data
+results = ltc(rcbdltc, replication, line, tester, check, yield)
 
-results1 = ltcalpha(alphalt, replication, block, line, tester, yield)
+#View results
+results
 ```
 
