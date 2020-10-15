@@ -26,18 +26,35 @@ if (!require("remotes")) install.packages("remotes")
 remotes::install_github("nandp1/gpbStat")
 ```
 
-## Example
+## Example 1
 
-Sample example for RCBD analysis
+Sample example for RCBD analysis with crosses and checks
 
 ```r
 library(gpbStat)
 
 # Loading data
-data(rcbdltc)
+data(rcbdltcchk)
 
 #Analysing data
-results = ltc(rcbdltc, replication, line, tester, check, yield)
+results = ltcchk(rcbdltcchk, replication, line, tester, check, yield)
+
+#View results
+results
+```
+
+## Example 2
+
+Sample example for Alpha Lattice analysis with crosses and checks
+
+```r
+library(gpbStat)
+
+# Loading data
+data(alphaltcchk)
+
+#Analysing data
+results = ltcchk(alphaltcchk, replication, line, tester, check, yield, block)
 
 #View results
 results
