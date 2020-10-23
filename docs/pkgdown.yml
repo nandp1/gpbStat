@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  ltcalpha: ltcalpha.html
-  ltcrcbd: ltcrcbd.html
-last_built: 2020-10-11T03:10Z
+  ltc: ltc.html
+  ltcchk: ltcchk.html
+last_built: 2020-10-23T13:15Z
 

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Citation and Authors • gpbStat</title>
+<title>Line x Tester data in RCBD — rcbdltc • gpbStat</title>
 
 
 <!-- jquery -->
@@ -18,8 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
 <!-- bootstrap-toc -->
-<link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script>
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
@@ -33,13 +33,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
 
-<meta property="og:title" content="Citation and Authors" />
+<meta property="og:title" content="Line x Tester data in RCBD — rcbdltc" />
+<meta property="og:description" content="The sample Line x Tester data containing only crosses laid out in Randomized Complete Block Design (RCBD)." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-citation-authors">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -70,7 +71,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">gpbStat</a>
+        <a class="navbar-link" href="../index.html">gpbStat</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
@@ -78,13 +79,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -94,10 +95,10 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="articles/ltc.html">ltc: Analysing Line x Tester data containing only crosses.</a>
+      <a href="../articles/ltc.html">ltc: Analysing Line x Tester data containing only crosses.</a>
     </li>
     <li>
-      <a href="articles/ltcchk.html">ltcchk: Analysing Line x Tester data containing crosses and checks.</a>
+      <a href="../articles/ltcchk.html">ltcchk: Analysing Line x Tester data containing crosses and checks.</a>
     </li>
   </ul>
 </li>
@@ -120,42 +121,48 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Citation</h1>
-      <small class="dont-index">Source: <a href='https://github.com/nandp1/gpbStat/blob/master/inst/CITATION'><code>inst/CITATION</code></a></small>
+    <h1>Line x Tester data in RCBD</h1>
+    <small class="dont-index">Source: <a href='https://github.com/nandp1/gpbStat/blob/master/R/rcbdltc.R'><code>R/rcbdltc.R</code></a></small>
+    <div class="hidden name"><code>rcbdltc.Rd</code></div>
     </div>
 
-    <p>Nandan Patil, and Lakshmi R Gangavati (2020).  Statistical analysis of Plant Breeding data.R package version 0.3.0
-      , https://github.com/nandp1/gpbStat/https://cran.r-project.org/package=gpbStat.</p>
-    <pre>@Manual{,
-  title = {Statistical analysis of Plant Breeding data},
-  author = {{Nandan Patil} and {Lakshmi R. Gangavati}},
-  year = {2020},
-  note = {R package version 0.3.0},
-  note = {https://github.com/nandp1/gpbStat/},
-  note = {https://cran.r-project.org/package=gpbStat},
-}</pre>
-
-    <div class="page-header">
-      <h1>Authors</h1>
+    <div class="ref-description">
+    <p>The sample Line x Tester data containing only crosses laid out in Randomized Complete Block Design (RCBD).</p>
     </div>
 
-    <ul class="list-unstyled">
-      <li>
-        <p><strong>Nandan Patil</strong>. Maintainer, author. <a href='https://orcid.org/0000-0003-0100-9931' target='orcid.widget' aria-label='ORCID'><span class='fab fa-orcid orcid' aria-hidden='true'></span></a>
-        </p>
-      </li>
-      <li>
-        <p><strong>Lakshmi R. Gangavati</strong>. Author, contributor. 
-        </p>
-      </li>
-    </ul>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>rcbdltc</span><span class='op'>)</span></pre>
 
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame of four variables of 15 crosses derived from five lines and three testers.</p><dl>
+ <dt>replication</dt><dd><p>four replications</p></dd>
+ <dt>line</dt><dd><p>five inbred genotype</p></dd>
+ <dt>tester</dt><dd><p>three inbred genotype</p></dd>
+ <dt>yield</dt><dd><p>trait of intrest</p></dd>
+
+
+</dl>
+
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='alphaltcchk.html'>alphaltcchk</a></code>
+   ,<code><a href='alphaltc.html'>alphaltc</a></code>
+   ,<code><a href='rcbdltcchk.html'>rcbdltcchk</a></code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>result</span> <span class='op'>=</span> <span class='fu'><a href='ltc.html'>ltc</a></span><span class='op'>(</span><span class='va'>rcbdltc</span>, <span class='va'>replication</span>, <span class='va'>line</span>, <span class='va'>tester</span>, <span class='va'>yield</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
+#&gt; Analysis of Line x Tester:  yield </div></pre>
   </div>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
 </div>
-
 
 
       <footer>
