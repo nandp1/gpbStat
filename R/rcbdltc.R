@@ -1,10 +1,10 @@
-#' Line x Tester data for RCBD
+#' Line x Tester data in RCBD
 #'
 #' The sample Line x Tester data containing only crosses laid out in Randomized Complete Block Design (RCBD).
 #'
 #'@docType data
 #'
-#'@usage data(rcbdlt)
+#'@usage data(rcbdltc)
 #'
 #' @format A data frame of four variables of 15 crosses derived from five lines and three testers.
 #' \describe{
@@ -19,6 +19,6 @@
 #'    ,\code{\link{alphaltc}}
 #'    ,\code{\link{rcbdltcchk}}
 #'
-#' @examples result = ltc(rcbdlt, replication, line, tester, yield)
+#' @examples result = ltc(rcbdltc, replication, line, tester, yield)
 
-"rcbdlt"
+"rcbdltc"

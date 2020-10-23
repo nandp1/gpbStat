@@ -1,4 +1,4 @@
-#' Line x Tester data (Crosses and Checks) for Alpha Lattice
+#' Line x Tester data (Crosses and Checks) in Alpha Lattice
 #'
 #' The sample Line x Tester data of containing crosses and checks laid out in Alpha Lattice design. The data is composed of five lines, three testers
 #' and three checks.
@@ -19,6 +19,6 @@
 #'    ,\code{\link{alphaltc}}
 #'    ,\code{\link{rcbdltcchk}}
 #'
-#' @examples result = ltcchk(alphalt, replication, line, tester, yield, block)
+#' @examples result = ltcchk(alphaltcchk, replication, line, tester, yield, block)
 
-"alphalt"
+"alphaltcchk"

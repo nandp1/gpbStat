@@ -1,0 +1,56 @@
+---
+title: "ltc: Analysing Line x Tester data containing only crosses."
+output: rmarkdown::html_vignette
+author: Nandan Patil 
+vignette: >
+  %\VignetteIndexEntry{ltc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+The function `ltc` conducts Line x Tester analysis when the data contains only *crosses*. The experimental design may be RCBD or Alpha lattice design. 
+
+## Example: Analyzing Line x Tester data (crosses) laid out in Alpha Lattice design.
+
+```{r setup}
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data("alphaltc")
+
+# View the structure of dataframe. 
+str(alphaltc)
+
+# Conduct Line x Tester analysis
+result = ltc(alphaltc, replication, line, tester, yield, block)
+
+# View the output
+result
+```
+
+## Example: Analyzing Line x Tester data (crosses) laid out in RCBD.
+
+```{r}
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data("rcbdltc")
+
+# View the structure of dataframe. 
+str(rcbdltc)
+
+# Conduct Line x Tester analysis
+result1 = ltc(rcbdltc, replication, line, tester, yield)
+
+# View the output
+result1
+```
+
