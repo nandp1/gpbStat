@@ -8,6 +8,8 @@
 The package is used for statistical analysis of Plant Breeding
 experiments.
 
+*Package Website* https://nandp1.github.io/gpbStat/ 
+
 ## Installation
 
 YOu can install package from Github through
