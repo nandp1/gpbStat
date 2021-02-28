@@ -13,7 +13,7 @@ Package Website <https://nandp1.github.io/gpbStat/>
 
 ## Installation
 
-YOu can install package from Github through
+You can install package from Github through
 
 ``` r
 install.packages("devtools")
