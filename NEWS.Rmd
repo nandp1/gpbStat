@@ -1,7 +1,6 @@
 ---
 title: "NEWS"
 author: "Nandan Patil"
-date: "11/4/2020"
 output: html_document
 ---
 
@@ -22,6 +21,10 @@ Install from CRAN
 install.packages("gpbStat")
 ```
 Package website [gpbStat](https://nandp1.github.io/gpbStat/)
+
+## gpbStat version 0.3.1
+
+* Estimation of Kings Variance is removed from the function. 
 
 ## gpbStat version 0.3.0
 

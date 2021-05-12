@@ -20,16 +20,18 @@ The package is used for statistical analysis of Plant Breeding experiments.
 
 Package Website https://nandp1.github.io/gpbStat/ 
 
+Note: In the latest version 0.3.1 estimation of Kings Variance is not included. 
+
 ## Installation
 
-YOu can install package from Github  through 
+You can install package from Github  through 
 ``` r
 install.packages("devtools")
 library(devtools)
 install_github("nandp1/gpbStat")
 ```
 
-You can install the released version of gpbStat from [CRAN](https://CRAN.R-project.org) with:
+Install gpbStat from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("gpbStat")

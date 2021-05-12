@@ -2,9 +2,7 @@
 % Please edit documentation in R/ltc.R
 \name{ltc}
 \alias{ltc}
-\title{Analysis of Line x Tester data containing only Crosses laid out in RCBD or Alpha Lattice design.
-
-Used for analyzing the line x tester data containing crosses laid out in randomized complete block design or alpha lattice design.}
+\title{Analysis of Line x Tester data containing only Crosses laid out in RCBD or Alpha Lattice design.}
 \usage{
 ltc(data, replication, line, tester, y, block)
 }
@@ -26,13 +24,10 @@ ltc(data, replication, line, tester, y, block)
 and Genotypic variance for the given trait.}\item{\code{Genetic Variability}}{Phenotypic coefficient of variability and Genotypic coefficient of variability and
 Environmental coefficient of Variation.}\item{\code{Proportional Contribution}}{Propotional contribution of Lines, Tester and Line x Tester interaction.}\item{\code{GCA lines}}{Combining
 ability effects of lines.}\item{\code{GCA testers}}{Combining ability effects of testers.}\item{\code{SCA crosses}}{Combining ability effects of crosses}\item{\code{Line x Tester
-ANOVA}}{ANOVA with all the factors.}\item{\code{GV Singh & Chaudhary}}{Genetic component of Variance as per Singh and Chaudhary, 1977.}\item{\code{GV King}}{Genetic component of Variance as
-per King, 1961.}\item{\code{Standard Errors}}{Standard error for combining ability effects.}\item{\code{Critical Difference}}{Critical Difference at 5 pecent for combining ability effects.}
+ANOVA}}{ANOVA with all the factors.}\item{\code{GV Singh & Chaudhary}}{Genetic component of Variance as per Singh and Chaudhary, 1977.}\item{\code{Standard Errors}}{Standard error for combining ability effects.}\item{\code{Critical Difference}}{Critical Difference at 5 pecent for combining ability effects.}
 }
 \description{
 Analysis of Line x Tester data containing only Crosses laid out in RCBD or Alpha Lattice design.
-
-Used for analyzing the line x tester data containing crosses laid out in randomized complete block design or alpha lattice design.
 }
 \details{
 Analyzing the line by tester data only using the data from crosses which are evaluated in alpha lattice design. All the factors are considered as fixed.
@@ -41,20 +36,27 @@ Analyzing the line by tester data only using the data from crosses which are eva
 The block variable is inserted at the last if the experimental design is Alpha Lattice. For RCBD no need to have block factor.
 }
 \examples{
-\dontrun{#Line Tester analysis data with only crosses
+\dontrun{#Line Tester analysis data with only crosses in RCBD
 library(gpbStat)
 data(rcbdltc)
-result = ltc(rcbdltc, replication, line, tester, yield)}
+result1 = ltc(rcbdltc, replication, line, tester, yield)
+result1
+
+#Line Tester analysis data with only crosses in Alpha Lattice
+library(gpbStat)
+data(alphaltc)
+result2 = ltc(alphaltc, replication, line, tester, yield, block)
+result2
+}
 }
 \references{
 Kempthorne, O. (1957), Introduction to Genetic Statistics. John Wiley and Sons, New York.
              , 468-472.
 Singh, R. K. and Chaudhary, B. D. (1977). Biometrical Methods in Quantitative Genetic Analysis. Kalyani Publishers, New Delhi.
-King, J. G., Quinby, J. R., Stephens, j. C., Kramer, N. W. and Lahr, K. A. (1961). An evaluation of parents of grain Sorghum hybrids. Bull. Texas Agric. Exp. Sta., M.P. 510.
 }
 \seealso{
 \code{\link[gpbStat]{ltcchk}}
 }
 \author{
-Nandan Patil \email{patilnads@gmail.com}
+Nandan Patil \email{tryanother609@gmail.com}
 }

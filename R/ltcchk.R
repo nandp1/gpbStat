@@ -17,14 +17,13 @@
 #' and Genotypic variance for the given trait.}\item{\code{Genetic Variability}}{Phenotypic coefficient of variability and Genotypic coefficient of variability and
 #' Environmental coefficient of Variation.}\item{\code{Proportional Contribution}}{Propotional contribution of Lines, Tester and Line x Tester interaction.}\item{\code{GCA lines}}{Combining
 #' ability effects of lines.}\item{\code{GCA testers}}{Combining ability effects of testers.}\item{\code{SCA crosses}}{Combining ability effects of crosses}\item{\code{Line x Tester
-#' ANOVA}}{ANOVA with all the factors.}\item{\code{GV Singh & Chaudhary}}{Genetic component of Variance as per Singh and Chaudhary, 1977.}\item{\code{GV King}}{Genetic component of Variance as
-#' per King, 1961.}\item{\code{Standard Errors}}{Standard error for combining ability effects.}\item{\code{Critical Difference}}{Critical Difference at 5 percent for combining ability effects.}
+#' ANOVA}}{ANOVA with all the factors.}\item{\code{GV Singh & Chaudhary}}{Genetic component of Variance as per Singh and Chaudhary, 1977.}\item{\code{Standard Errors}}{Standard error for combining ability effects.}\item{\code{Critical Difference}}{Critical Difference at 5 percent for combining ability effects.}
 #'
 #' @author Nandan Patil
 #'
 #' @details Analyzing the line by tester data only using the data from crosses which are evaluated in alpha lattice design. All the factors are considered as fixed.
 #'
-#' @author Nandan Patil \email{patilnads@@gmail.com}
+#' @author Nandan Patil \email{tryanother609@gmail.com}
 #' @details Analyzing the line by tester data only using the data from crosses which are evaluated in alpha lattice design.
 #'All the factors are considered as fixed.
 #'
@@ -32,7 +31,6 @@
 #' Kempthorne, O. (1957), Introduction to Genetic Statistics. John Wiley and Sons, New York.
 #'              , 468-472.
 #' Singh, R. K. and Chaudhary, B. D. (1977). Biometrical Methods in Quantitative Genetic Analysis. Kalyani Publishers, New Delhi.
-#' King, J. G., Quinby, J. R., Stephens, j. C., Kramer, N. W. and Lahr, K. A. (1961). An evaluation of parents of grain Sorghum hybrids. Bull. Texas Agric. Exp. Sta., M.P. 510.
 #'
 #'@seealso \code{\link[gpbStat]{ltc}}
 #'
@@ -47,7 +45,7 @@
 #'results = ltcchk(rcbdltcchk, replication, line, tester, check, yield)
 #'results
 #'
-#'Line X Tester analysis(crosses and checks) in Alpha Lattice
+#'#Line X Tester analysis with crosses and checks in Alpha Lattice
 #'library(gpbStat)
 #'data(alphaltcchk)
 #'results1 = ltcchk(alphaltcchk, replication, line, tester, check, yield, block)
@@ -230,16 +228,6 @@ ltcchk <-
       c2 <- matrix[7, 2] * 100/matrix[4, 2]
       c3 <- matrix[8, 2] * 100/matrix[4, 2]
 
-      # Genetic Component of Variance (King, 1961)
-
-      m1 = matrix[6, 3]
-      m2 = matrix[7, 3]
-      m3 = matrix[8, 3]
-      m4 = matrix[9, 3]
-      y = (m1+m2-2*m3)/(r*(l+t))
-      x = (m1 + m2+ m3 - 3*m4 + r*y*(6-l-t))
-      gca.var = y
-      sca.var = x- 2*y
 
       # Overall ANOVA Results
       overall = matrix
@@ -254,8 +242,6 @@ ltcchk <-
                       "F = 0, Variance due to Dominance",
                       "F = 1, Variance due to Dominance")
 
-      kinggv = c(x, y,gca.var,sca.var)
-      names(kinggv) = c("Cov Full Sib", "Cov Half Sib", "gca variance", "sca variance")
 
       pclt  = c(c1, c2, c3)
       names(pclt) = c("Lines", "Tester", " Line x Tester")
@@ -264,7 +250,7 @@ ltcchk <-
                     "Line x Tester ANOVA" = ltanova,
                     "GCA lines" = GCA.lines, "GCA testers" = GCA.testers, "SCA crosses" = SCA,
                     "Proportional Contribution" = pclt,
-                    "GV Singh & Chaudhary" = scgv, "GV King" = kinggv,
+                    "GV Singh & Chaudhary" = scgv,
                     "Standard Errors" = ses, "Critical differance" = cd)
 
       return(result)
@@ -437,17 +423,6 @@ ltcchk <-
       c2 <- matrix[6, 2] * 100/matrix[3, 2]
       c3 <- matrix[7, 2] * 100/matrix[3, 2]
 
-      # Genetic Component of Variance (King, 1961)
-
-      m1 = matrix[6, 3]
-      m2 = matrix[7, 3]
-      m3 = matrix[8, 3]
-      m4 = matrix[9, 3]
-      y = (m1+m2-2*m3)/(r*(l+t))
-      x = (m1 + m2+ m3 - 3*m4 + r*y*(6-l-t))
-      gca.var = y
-      sca.var = x- 2*y
-
       # Overall anova
       matrix1 <- matrix[c(1:9), ]
       overall = matrix1
@@ -463,9 +438,6 @@ ltcchk <-
                       "F = 0, Variance due to Dominance",
                       "F = 1, Variance due to Dominance")
 
-      kinggv = c(x, y,gca.var,sca.var)
-      names(kinggv) = c("Cov Full Sib", "Cov Half Sib", "gca variance", "sca variance")
-
       pclt  = c(c1, c2, c3)
       names(pclt) = c("Lines", "Tester", " Line x Tester")
 
@@ -473,7 +445,7 @@ ltcchk <-
                     "Line x Tester ANOVA" = ltanova,
                     "GCA lines" = GCA.lines, "GCA testers" = GCA.testers, "SCA crosses" = SCA,
                     "Proportional Contribution" = pclt,
-                    "GV Singh & Chaudhary" = scgv, "GV King" = kinggv,
+                    "GV Singh & Chaudhary" = scgv,
                     "Standard Errors" = ses, "Critical differance" = cd)
 
       return(result)

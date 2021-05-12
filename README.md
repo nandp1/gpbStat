@@ -11,6 +11,9 @@ experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
+Note: In the latest version 0.3.1 estimation of Kings Variance is not
+included.
+
 ## Installation
 
 You can install package from Github through
@@ -21,8 +24,7 @@ library(devtools)
 install_github("nandp1/gpbStat")
 ```
 
-You can install the released version of gpbStat from
-[CRAN](https://CRAN.R-project.org) with:
+Install gpbStat from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("gpbStat")
@@ -120,10 +122,6 @@ results1
 #> F = 0, Variance due to Dominance F = 1, Variance due to Dominance 
 #>                       836.602526                       418.301263 
 #> 
-#> $`GV King`
-#> Cov Full Sib Cov Half Sib gca variance sca variance 
-#>   4943.46124     -3.17308     -3.17308   4949.80740 
-#> 
 #> $`Standard Errors`
 #>      S.E. gca for line    S.E. gca for tester        S.E. sca effect 
 #>               2.844451               2.203303               4.926734 
@@ -158,7 +156,7 @@ str(alphaltc)
 ## Note: The "block" parameter comes at the end.
 results2 = ltc(alphaltc, replication, line, tester, yield, block)
 #> 
-#> Analysis of Line x Tester:  yield
+#> Analysis of Line x Tester: yield
 
 ## Viewing the results
 results2
@@ -232,10 +230,6 @@ results2
 #>                        120.27111                         60.13555 
 #> F = 0, Variance due to Dominance F = 1, Variance due to Dominance 
 #>                        211.09158                         20.82769 
-#> 
-#> $`GV King`
-#> Cov Full Sib Cov Half Sib gca variance sca variance 
-#>    4116.1822     118.7347     118.7347    3878.7128 
 #> 
 #> $`Standard Errors`
 #>      S.E. gca for line    S.E. gca for tester        S.E. sca effect 
