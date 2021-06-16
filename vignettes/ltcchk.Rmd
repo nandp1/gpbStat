@@ -1,0 +1,54 @@
+---
+title: "ltcchk: Analysing Line x Tester data containing crosses and checks."
+author: "Nandan Patil"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ltcchk}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The function `ltcchk` conducts Line x Tester analysis when the data contains crosses and checks. The experimental design may be RCBD or Alpha lattice design. 
+
+## Example: Analyzing Line x Tester data (crosses and checks) laid out in Alpha Lattice design. 
+```{r}
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data(alphaltcchk)
+
+# View the structure of dataframe. 
+str(alphaltcchk)
+
+# Conduct Line x Tester analysis
+result = ltcchk(alphaltcchk, replication, line, tester, check, yield, block)
+
+# View the output
+result
+```
+
+## Example: Analyzing Line x Tester data (crosses and checks) laid out in RCBD. 
+```{r}
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data("rcbdltcchk")
+
+# View the structure of dataframe. 
+str(rcbdltcchk)
+
+# Conduct Line x Tester analysis
+result1 = ltcchk(rcbdltcchk, replication, line, tester, check, yield)
+
+# View the output
+result1
+```
