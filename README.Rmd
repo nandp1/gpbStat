@@ -1,0 +1,105 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# gpbStat
+
+<!-- badges: start -->
+[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/gpbStat)](https://cran.r-project.org/package=gpbStat)
+[![cran checks](https://cranchecks.info/badges/summary/gpbStat)](https://cran.r-project.org/web/checks/check_results_gpbStat.html)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
+![Downloads](http://cranlogs.r-pkg.org/badges/gpbStat)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
+<!-- badges: end -->
+
+The package is used for statistical analysis of Plant Breeding experiments.  
+
+Package Website https://nandp1.github.io/gpbStat/ 
+
+Note: In the latest version 0.3.1 estimation of Kings Variance is not included. 
+
+## Installation
+
+Install latest package from Github  through 
+``` r
+install.packages("devtools")
+library(devtools)
+install_github("nandp1/gpbStat")
+```
+
+Install gpbStat from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("gpbStat")
+```
+
+## Example
+
+Line by Tester analysis (only crosses).
+
+```{r example}
+
+# Loading the gpbStat package
+library(gpbStat)
+
+# Loading dataset
+data(rcbdltc)
+
+
+## Now by using function ltc we analyze the data.
+## The first parameter of `ltc`  function is "data" followed by replication, line, tester and dependent variable(yield)
+results1 = ltc(rcbdltc, replication, line, tester, yield)
+
+## Viewing the results
+results1
+```
+
+```{r}
+# Similarly we analyze the line tester data containing only crosses laid out in Alpha lattice design.
+# Load the package
+library(gpbStat)
+
+# Loading dataset
+data("alphaltc")
+
+# Viewing the Structure of dataset
+str(alphaltc)
+# There are five columns replication, block, line, tester and yield.
+
+
+## Now by using function ltc we analyze the data.
+## The first parameter of `ltc`  function is "data" followed by replication, line, tester, dependent variable(yield) and block.
+## Note: The "block" parameter comes at the end.
+results2 = ltc(alphaltc, replication, line, tester, yield, block)
+
+## Viewing the results
+results2
+```
+
+
+```{r}
+# Line x Tester analysis for multiple traits laid in Alpha lattice design.  
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data("alphaltcmt")
+
+# View the structure of dataframe. 
+str(alphaltcmt)
+
+# Conduct Line x Tester analysis
+result3 = ltcmt(alphaltcmt, replication, line, tester, alphaltcmt[,5:7], block)
+
+# View the output
+result3
+```
