@@ -17,9 +17,6 @@ experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
-Note: In the latest version 0.3.1 estimation of Kings Variance is not
-included.
-
 ## Installation
 
 You can install package from Github through
