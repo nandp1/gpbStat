@@ -17,7 +17,12 @@ experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
-# Upcoming functions
+
+## New Function
+
+* ```ltcmt``` Analysis Line x Tester data (only crosses) for multiple traits. 
+* 
+## Upcoming functions
 
 * Line x Tester analysis based on single plant observation as per Arunachalam, V.(1974).  
 
