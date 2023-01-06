@@ -12,19 +12,19 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
 <!-- badges: end -->
 
-The package is used for statistical analysis of Plant Breeding
-experiments.
+
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
+## Upcoming functions
+
+* Line x Tester analysis based on single plant observation as per Arunachalam, V.(1974) for RCBD and Alpha lattice design. 
+
+* Results of ```ltmt``` to be displayed with names of lines, testers and traits. 
 
 ## New Function
 
 * ```ltcmt``` Analysis Line x Tester data (only crosses) for multiple traits. 
-
-## Upcoming functions
-
-* Line x Tester analysis based on single plant observation as per Arunachalam, V.(1974).  
 
 ## Installation
 
