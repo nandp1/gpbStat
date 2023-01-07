@@ -1,23 +1,10 @@
----
-title: "dm2 : Diallel Method 2 analysis for RCBD and Alpha Lattice"
-output: rmarkdown::html_vignette
-author: Nandan Patil 
-vignette: >
-  %\VignetteIndexEntry{dm2}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-```{r, include = FALSE}
+## ---- include = FALSE---------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-```
-Function dm2 conducts Diallel Method 2 analysis for RCBD and Alpha Lattice design. 
 
-Example 1: Diallel Method 2 analysis for RCBD design. 
-```{r setup}
+## ----setup--------------------------------------------------------------------
 # Load the package
 library(gpbStat)
 
@@ -33,11 +20,8 @@ result = dm2(dm2rcbd, rep, parent1, parent2, DTP)
 # View the output
 result
 
-```
 
-Example 2: Diallel Method 2 analysis for Alpha Lattice design. 
-
-```{r}
+## -----------------------------------------------------------------------------
 # Load the package
 library(gpbStat)
 
@@ -52,4 +36,4 @@ result1 = dm2(dm2alpha, replication, parent1, parent2, TW, block)
 
 # View the output
 result1
-```
+

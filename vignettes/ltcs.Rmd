@@ -1,0 +1,50 @@
+---
+title: "ltcs: Analysis of Line x Tester data on single plant basis containing only Crosses laid out in RCBD or Alpha Lattice design."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ltcs}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Analyzing the line by tester data single plant observations evaluated in RCBD and Alpha lattice design. All the factors are considered as fixed.
+
+## Example: Analyzing Line x Tester data (crosses) based on single plant observations laid out in Alpha Lattice design.
+
+```{r}
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data("alphaltcs")
+
+# Conduct Line x Tester analysis on single plant basis
+result = ltcs(alphaltcs, replication, line, tester, obs, yield, block)
+
+# View the output
+result
+```
+
+## Example: Analyzing Line x Tester data (crosses) based on single plant observations laid out in RCBD.
+
+```{r}
+# Load the package
+library(gpbStat)
+
+#Load the dataset
+data("rcbdltcs")
+
+# Conduct Line x Tester analysis on single plant basis
+result1 = ltcs(rcbdltcs, replication, line, tester, obs, yield)
+
+# View the output
+result1
+```
+
