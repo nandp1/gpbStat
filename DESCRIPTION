@@ -1,7 +1,7 @@
 Package: gpbStat
 Type: Package
 Title: Comprehensive Statistical Analysis of Plant Breeding Experiments
-Version: 0.3.3
+Version: 0.4.0
 Authors@R: 
     c(
         person(
@@ -23,13 +23,12 @@ License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.0)
-Date: 2021-07-17
+Date: 2022-01-07
 URL: https://github.com/nandp1/gpbStat/ 
 BugReports: https://github.com/nandp1/gpbStat/issues  
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3
 Suggests: 
     testthat,
     knitr,
-    rmarkdown,
-    reshape2
+    rmarkdown
 VignetteBuilder: knitr

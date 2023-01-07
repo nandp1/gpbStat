@@ -3,7 +3,7 @@
 
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/gpbStat)](https://cran.r-project.org/package=gpbStat)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/gpbStat)](https://cran.r-project.org/package=gpbStat)
 [![cran
 checks](https://cranchecks.info/badges/summary/gpbStat)](https://cran.r-project.org/web/checks/check_results_gpbStat.html)
 [![Lifecycle:
@@ -12,19 +12,13 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
 <!-- badges: end -->
 
-
+The package is used for statistical analysis of Plant Breeding
+experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
-## Upcoming functions
-
-* Line x Tester analysis based on single plant observation as per Arunachalam, V.(1974) for RCBD and Alpha lattice design. 
-
-* Results of ```ltmt``` to be displayed with names of lines, testers and traits. 
-
-## New Function
-
-* ```ltcmt``` Analysis Line x Tester data (only crosses) for multiple traits. 
+Note: In the latest version 0.3.1 estimation of Kings Variance is not
+included.
 
 ## Installation
 
@@ -47,6 +41,7 @@ install.packages("gpbStat")
 Line by Tester analysis (only crosses).
 
 ``` r
+
 # Loading the gpbStat package
 library(gpbStat)
 
@@ -267,14 +262,35 @@ data("alphaltcmt")
 
 # View the structure of dataframe. 
 str(alphaltcmt)
-#> Classes 'tbl_df', 'tbl' and 'data.frame':    60 obs. of  7 variables:
-#>  $ replication: num  1 1 1 1 1 1 1 1 1 1 ...
-#>  $ block      : num  1 1 1 2 2 2 3 3 3 4 ...
-#>  $ line       : chr  "l5" "l1" "l2" "l2" ...
-#>  $ tester     : chr  "t1" "t3" "t3" "t1" ...
-#>  $ hsw        : num  26.7 22.1 26.2 25.7 18 ...
-#>  $ sh         : num  82.2 83.6 83.8 81.7 81.6 ...
-#>  $ gy         : num  61.3 30.7 48.1 25.9 29.1 ...
+#> Classes 'spec_tbl_df', 'tbl_df', 'tbl' and 'data.frame': 60 obs. of  7 variables:
+#>  $ replication: chr  "r1" "r3" "r2" "r4" ...
+#>  $ block      : chr  "b2" "b2" "b4" "b5" ...
+#>  $ line       : chr  "DIL 2" "DIL 2" "DIL 2" "DIL 2" ...
+#>  $ tester     : chr  "DIL-101" "DIL-101" "DIL-101" "DIL-101" ...
+#>  $ hsw        : num  25.7 24.5 23.7 25.1 23 ...
+#>  $ sh         : num  81.7 83.3 86 84.6 85.5 ...
+#>  $ gy         : num  25.9 41 65.7 47.3 30.8 ...
+#>  - attr(*, "spec")=List of 3
+#>   ..$ cols   :List of 7
+#>   .. ..$ replication: list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+#>   .. ..$ block      : list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+#>   .. ..$ line       : list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+#>   .. ..$ tester     : list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_character" "collector"
+#>   .. ..$ hsw        : list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_double" "collector"
+#>   .. ..$ sh         : list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_double" "collector"
+#>   .. ..$ gy         : list()
+#>   .. .. ..- attr(*, "class")= chr [1:2] "collector_double" "collector"
+#>   ..$ default: list()
+#>   .. ..- attr(*, "class")= chr [1:2] "collector_guess" "collector"
+#>   ..$ delim  : chr ","
+#>   ..- attr(*, "class")= chr "col_spec"
+#>  - attr(*, "problems")=<externalptr>
 
 # Conduct Line x Tester analysis
 result3 = ltcmt(alphaltcmt, replication, line, tester, alphaltcmt[,5:7], block)
@@ -296,166 +312,166 @@ result3 = ltcmt(alphaltcmt, replication, line, tester, alphaltcmt[,5:7], block)
 result3
 #> $Mean
 #> $Mean$hsw
-#>     Tester
-#> Line        1        2        3
-#>    1 24.28100 24.38975 26.43250
-#>    2 24.75150 23.17850 23.85100
-#>    3 22.12950 25.09375 25.46600
-#>    4 25.36125 26.52300 26.32225
-#>    5 24.40525 23.86375 22.90450
+#>        Tester
+#> Line    DIL-101 DIL-103 DIL 102
+#>   DIL-1 24.2800 26.4325 24.3900
+#>   DIL-4 25.3625 26.3225 26.5250
+#>   DIL 2 24.7525 23.8525 23.1800
+#>   DIL 3 22.1300 25.4675 25.0975
+#>   DIL 5 24.4075 22.9050 23.8625
 #> 
 #> $Mean$sh
-#>     Tester
-#> Line        1        2        3
-#>    1 82.93436 83.87124 84.20399
-#>    2 83.89508 84.62547 83.77366
-#>    3 83.61044 84.45869 83.04424
-#>    4 84.27547 84.32636 81.81483
-#>    5 83.04301 82.58873 84.83067
+#>        Tester
+#> Line    DIL-101 DIL-103 DIL 102
+#>   DIL-1 82.9375 84.2025 83.8700
+#>   DIL-4 84.2775 81.8175 84.3250
+#>   DIL 2 83.8950 83.7725 84.6225
+#>   DIL 3 83.6100 83.0450 84.4600
+#>   DIL 5 83.0425 84.8300 82.5875
 #> 
 #> $Mean$gy
-#>     Tester
-#> Line        1        2        3
-#>    1 54.26683 48.86251 44.75305
-#>    2 44.95867 45.31223 47.39452
-#>    3 46.06275 54.77228 55.05693
-#>    4 60.56487 52.13965 53.79695
-#>    5 58.26799 53.53054 53.55139
+#>        Tester
+#> Line    DIL-101 DIL-103 DIL 102
+#>   DIL-1 54.2675 44.7525 48.8625
+#>   DIL-4 60.5650 53.7975 52.1400
+#>   DIL 2 44.9575 47.3975 45.3125
+#>   DIL 3 46.0625 55.0550 54.7700
+#>   DIL 5 58.2675 53.5525 53.5300
 #> 
 #> 
 #> $ANOVA
 #> $ANOVA$hsw
 #>                           Df     Sum Sq   Mean Sq   F value      Pr(>F)
-#> Replication                3 123.547315 41.182438 5.2008347 0.006007617
-#> Blocks within Replication 16 159.485732  9.967858 1.2588177 0.292524662
-#> Crosses                   14  95.615586  6.829685 0.8625051 0.603263868
-#> Lines                      4  44.431866 11.107966 1.0223891 0.406049177
-#> Testers                    2   6.558666  3.279333 0.3018333 0.740946613
-#> Lines X Testers            8  44.625055  5.578132 0.5134172 0.839950285
-#> Error                     26 205.879143  7.918429        NA          NA
-#> Total                     59 584.527775        NA        NA          NA
+#> Replication                3 123.534952 41.178317 5.2008236 0.006007676
+#> Blocks within Replication 16 159.578141  9.973634 1.2596705 0.292005429
+#> Crosses                   14  95.647543  6.831967 0.8628778 0.602918614
+#> Lines                      4  44.421693 11.105423 1.0220298 0.406231362
+#> Testers                    2   6.558103  3.279052 0.3017705 0.740992561
+#> Lines X Testers            8  44.667747  5.583468 0.5138454 0.839635289
+#> Error                     26 205.858982  7.917653        NA          NA
+#> Total                     59 584.619618        NA        NA          NA
 #> 
 #> $ANOVA$sh
 #>                           Df     Sum Sq    Mean Sq   F value      Pr(>F)
-#> Replication                3  47.865214 15.9550714 5.5805022 0.004306487
-#> Blocks within Replication 16  61.859599  3.8662250 1.3522645 0.240056532
-#> Crosses                   14  40.010784  2.8579131 0.9995938 0.481506718
-#> Lines                      4   3.066186  0.7665466 0.1874088 0.943757507
-#> Testers                    2   2.486129  1.2430645 0.3039100 0.739429879
-#> Lines X Testers            8  34.458468  4.3073085 1.0530702 0.412196780
-#> Error                     26  74.335936  2.8590745        NA          NA
-#> Total                     59 224.071534         NA        NA          NA
+#> Replication                3  47.847660 15.9492200 5.5792805 0.004311049
+#> Blocks within Replication 16  61.895494  3.8684684 1.3532492 0.239549969
+#> Crosses                   14  39.935293  2.8525210 0.9978553 0.482967180
+#> Lines                      4   3.050693  0.7626733 0.1864544 0.944255260
+#> Testers                    2   2.468943  1.2344717 0.3017971 0.740973054
+#> Lines X Testers            8  34.415657  4.3019571 1.0517198 0.413116072
+#> Error                     26  74.324946  2.8586518        NA          NA
+#> Total                     59 224.003393         NA        NA          NA
 #> 
 #> $ANOVA$gy
 #>                           Df      Sum Sq    Mean Sq   F value       Pr(>F)
-#> Replication                3  3170.89296 1056.96432 7.6637547 0.0007890292
-#> Blocks within Replication 16  2338.16012  146.13501 1.0595843 0.4350901435
-#> Crosses                   14  1411.76346  100.84025 0.7311646 0.7260111510
-#> Lines                      4   787.68515  196.92129 0.9743323 0.4310135285
-#> Testers                    2    48.50139   24.25070 0.1199882 0.8872136703
-#> Lines X Testers            8   575.57692   71.94711 0.3559818 0.9379857942
-#> Error                     26  3585.84969  137.91730        NA           NA
-#> Total                     59 10506.66623         NA        NA           NA
+#> Replication                3  3171.01367 1057.00456 7.6631523 0.0007893935
+#> Blocks within Replication 16  2338.12660  146.13291 1.0594455 0.4352040161
+#> Crosses                   14  1411.65982  100.83284 0.7310257 0.7261397075
+#> Lines                      4   787.60961  196.90240 0.9741847 0.4310920496
+#> Testers                    2    48.49009   24.24505 0.1199536 0.8872442280
+#> Lines X Testers            8   575.56012   71.94502 0.3559517 0.9380005166
+#> Error                     26  3586.26808  137.93339        NA           NA
+#> Total                     59 10507.06817         NA        NA           NA
 #> 
 #> 
 #> $GCA.Line
-#>           Trait 1     Trait 2   Trait 3
-#> Line 1  0.4375167 -0.01655394 -2.258613
-#> Line 2 -0.6699000  0.41165231 -5.664270
-#> Line 3 -0.3671500  0.01804113  0.411244
-#> Line 4  1.4719333 -0.21419481  3.947743
-#> Line 5 -0.8724000 -0.19894469  3.563895
+#>              hsw          sh         gy
+#> DIL-1  0.4363333 -0.01633333 -2.2585000
+#> DIL-4  1.4721667 -0.21300000  3.9481667
+#> DIL 2 -0.6695000  0.41033333 -5.6635000
+#> DIL 3 -0.3661667  0.01866667  0.4098333
+#> DIL 5 -0.8728333 -0.19966667  3.5640000
 #> 
 #> $GCA.Tester
-#>           Trait 1    Trait 2    Trait 3
-#> Tester 1 -0.41120 -0.1347434  1.2714786
-#> Tester 2  0.01285  0.2876815 -0.6293023
-#> Tester 3  0.39835 -0.1529380 -0.6421764
+#>                 hsw         sh         gy
+#> DIL-101 -0.41133333 -0.1338333  1.2713333
+#> DIL-103  0.39816667 -0.1528333 -0.6416667
+#> DIL 102  0.01316667  0.2866667 -0.6296667
 #> 
 #> $SCA
-#> $SCA$`Trait 1`
-#>     Tester
-#> Line          1          2          3
-#>    1 -0.3422167 -0.6575167  0.9997333
-#>    2  1.2357000 -0.7613500 -0.4743500
-#>    3 -1.6890500  0.8511500  0.8379000
-#>    4 -0.2963833  0.4413167 -0.1449333
-#>    5  1.0919500  0.1264000 -1.2183500
+#> $SCA$hsw
+#>        Tester
+#> Line       DIL-101    DIL-103    DIL 102
+#>   DIL-1 -0.3428333  1.0001667 -0.6573333
+#>   DIL-4 -0.2961667 -0.1456667  0.4418333
+#>   DIL 2  1.2355000 -0.4740000 -0.7615000
+#>   DIL 3 -1.6903333  0.8376667  0.8526667
+#>   DIL 5  1.0938333 -1.2181667  0.1243333
 #> 
-#> $SCA$`Trait 2`
-#>     Tester
-#> Line           1           2          3
-#>    1 -0.60075619 -0.08630744  0.6870636
-#>    2 -0.06824822  0.23971724 -0.1714690
-#>    3  0.04072451  0.46655392 -0.5072784
-#>    4  0.93799581  0.56645558 -1.5044514
-#>    5 -0.30971591 -1.18641930  1.4961352
+#> $SCA$sh
+#>        Tester
+#> Line        DIL-101    DIL-103     DIL 102
+#>   DIL-1 -0.59866667  0.6853333 -0.08666667
+#>   DIL-4  0.93800000 -1.5030000  0.56500000
+#>   DIL 2 -0.06783333 -0.1713333  0.23916667
+#>   DIL 3  0.03883333 -0.5071667  0.46833333
+#>   DIL 5 -0.31033333  1.4961667 -1.18583333
 #> 
-#> $SCA$`Trait 3`
-#>     Tester
-#> Line         1           2          3
-#>    1  3.701222  0.19768507 -3.8989074
-#>    2 -2.201279  0.05305477  2.1482244
-#>    3 -7.172713  3.43759274  3.7351205
-#>    4  3.792902 -2.73153863 -1.0613638
-#>    5  1.879868 -0.95679396 -0.9230737
+#> $SCA$gy
+#>        Tester
+#> Line      DIL-101   DIL-103   DIL 102
+#>   DIL-1  3.702000 -3.900000  0.198000
+#>   DIL-4  3.792833 -1.061667 -2.731167
+#>   DIL 2 -2.203000  2.150000  0.053000
+#>   DIL 3 -7.171333  3.734167  3.437167
+#>   DIL 5  1.879500 -0.922500 -0.957000
 #> 
 #> 
 #> $CV
-#>    Trait1    Trait2    Trait3 
-#> 11.440345  2.020495 22.780202 
+#>       hsw        sh        gy 
+#> 11.439351  2.020348 22.781566 
 #> 
 #> $Genetic.Variance.Covariance.
-#>         Phenotypic Variance Genotypic Variance Environmental Variance
-#> Trait 1          -0.6697598          -8.588188               7.918429
-#> Trait 2          -0.4152151          -3.274290               2.859074
-#> Trait 3        -101.1137222        -239.031018             137.917296
-#>         Phenotypic coefficient of Variation Genotypic coefficient of Variation
-#> Trait 1                                 NaN                                NaN
-#> Trait 2                                 NaN                                NaN
-#> Trait 3                                 NaN                                NaN
-#>         Environmental coefficient of Variation Broad sense heritability
-#> Trait 1                              11.440345                12.822788
-#> Trait 2                               2.020495                 7.885767
-#> Trait 3                              22.780202                 2.363982
+#>     Phenotypic Variance Genotypic Variance Environmental Variance
+#> hsw          -0.6689343          -8.586587               7.917653
+#> sh           -0.4155230          -3.274175               2.858652
+#> gy         -101.1095400        -239.042928             137.933388
+#>     Phenotypic coefficient of Variation Genotypic coefficient of Variation
+#> hsw                                 NaN                                NaN
+#> sh                                  NaN                                NaN
+#> gy                                  NaN                                NaN
+#>     Environmental coefficient of Variation Broad sense heritability
+#> hsw                              11.439351                12.836220
+#> sh                                2.020348                 7.879648
+#> gy                               22.781566                 2.364198
 #> 
 #> $Std.Error
-#>         S.E. gca for line S.E. gca for tester S.E. sca effect
-#> Trait 1         0.8123232           0.6292229       1.4069851
-#> Trait 2         0.4881150           0.3780922       0.8454399
-#> Trait 3         3.3901487           2.6259979       5.8719097
-#>         S.E. (gi - gj)line S.E. (gi - gj)tester S.E. (sij - skl)tester
-#> Trait 1          1.1487985            0.8898555               1.989777
-#> Trait 2          0.6902988            0.5347031               1.195633
-#> Trait 3          4.7943942            3.7137218               8.304134
+#>     S.E. gca for line S.E. gca for tester S.E. sca effect S.E. (gi - gj)line
+#> hsw         0.8122835           0.6291921       1.4069162          1.1487423
+#> sh          0.4880789           0.3780643       0.8453774          0.6902478
+#> gy          3.3903464           2.6261511       5.8722523          4.7946739
+#>     S.E. (gi - gj)tester S.E. (sij - skl)tester
+#> hsw            0.8898120               1.989680
+#> sh             0.5346636               1.195544
+#> gy             3.7139384               8.304619
 #> 
 #> $C.D.
-#>         C.D. gca for line C.D. gca for tester C.D. sca effect
-#> Trait 1          1.669754           1.2933861        2.892099
-#> Trait 2          1.003335           0.7771797        1.737827
-#> Trait 3          6.968550           5.3978159       12.069883
-#>         C.D. (gi - gj)line C.D. (gi - gj)tester C.D. (sij - skl)tester
-#> Trait 1           2.361389             1.829124               4.090046
-#> Trait 2           1.418929             1.099098               2.457658
-#> Trait 3           9.855018             7.633664              17.069393
+#>     C.D. gca for line C.D. gca for tester C.D. sca effect C.D. (gi - gj)line
+#> hsw          1.669673           1.2933228        2.891958           2.361274
+#> sh           1.003260           0.7771222        1.737698           1.418825
+#> gy           6.968957           5.3981308       12.070587           9.855593
+#>     C.D. (gi - gj)tester C.D. (sij - skl)tester
+#> hsw             1.829035               4.089846
+#> sh              1.099017               2.457476
+#> gy              7.634110              17.070388
 #> 
 #> $Add.Dom.Var
-#>         Cov H.S. (line) Cov H.S. (tester) Cov H.S. (average) Cov F.S. (average)
-#> Trait 1       0.4608195        -0.1149399         0.03318511         -0.3379446
-#> Trait 2      -0.2950635        -0.1532122        -0.03843094         -0.1627380
-#> Trait 3      10.4145144        -2.3848209         0.76610579        -10.5634695
-#>         Addittive Variance(F=0) Addittive Variance(F=1) Dominance Variance(F=0)
-#> Trait 1               0.1327405              0.06637023               -1.170148
-#> Trait 2              -0.1537238             -0.07686188                0.724117
-#> Trait 3               3.0644232              1.53221158              -32.985091
-#>         Dominance Variance(F=1)
-#> Trait 1              -0.5850742
-#> Trait 2               0.3620585
-#> Trait 3             -16.4925453
+#>     Cov H.S. (line) Cov H.S. (tester) Cov H.S. (average) Cov F.S. (average)
+#> hsw       0.4601629        -0.1152208         0.03310414         -0.3374874
+#> sh       -0.2949403        -0.1533743        -0.03843202         -0.1641164
+#> gy       10.4131155        -2.3849984         0.76596517        -10.5696184
+#>     Addittive Variance(F=0) Addittive Variance(F=1) Dominance Variance(F=0)
+#> hsw               0.1324166              0.06620828              -1.1670924
+#> sh               -0.1537281             -0.07686404               0.7216527
+#> gy                3.0638607              1.53193033             -32.9941861
+#>     Dominance Variance(F=1)
+#> hsw              -0.5835462
+#> sh                0.3608263
+#> gy              -16.4970931
 #> 
 #> $Contribution.of.Line.Tester
-#>            Lines   Tester  Line x Tester
-#> Trait 1 46.46927 6.859411       46.67132
-#> Trait 2  7.66340 6.213647       86.12295
-#> Trait 3 55.79441 3.435518       40.77007
+#>         Lines   Tester  Line x Tester
+#> hsw 46.443110 6.856531       46.70036
+#> sh   7.639091 6.182359       86.17855
+#> gy  55.793159 3.434970       40.77187
 ```
