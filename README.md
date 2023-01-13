@@ -17,8 +17,11 @@ experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
-Note: In the latest version 0.3.1 estimation of Kings Variance is not
-included.
+Latest version 0.4.0 
+
+## New Function
+
+`ltcs` for analysis of Line x Tester data on single plant basis. 
 
 ## Installation
 
