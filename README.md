@@ -17,7 +17,7 @@ experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
-Latest version 0.4.0 
+Latest version *`0.4.0` *
 
 ## New Function
 
