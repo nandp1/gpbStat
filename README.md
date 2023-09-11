@@ -22,6 +22,10 @@ Latest version `0.4.0`
 
 `ltcs` for analysis of Line x Tester data on single plant basis. 
 
+## Upcoming Functions
+
+* For estimation of drought indices namely TOL, STI, SSPI, YI, YSI etc...
+  
 ## Installation
 
 Install latest package from Github through
