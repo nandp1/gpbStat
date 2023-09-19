@@ -4,11 +4,12 @@
 <!-- badges: start -->
 
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/gpbStat)](https://cran.r-project.org/package=gpbStat)
+[![cran
+checks](https://cranchecks.info/badges/summary/gpbStat)](https://cran.r-project.org/web/checks/check_results_gpbStat.html)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/gpbStat)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
-[<img src="https://zenodo.org/badge/301912383.svg" alt="DOI" width="186"/>](https://zenodo.org/badge/latestdoi/301912383)
 <!-- badges: end -->
 
 The package is used for statistical analysis of Plant Breeding
@@ -16,16 +17,9 @@ experiments.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
-Latest version `0.4.0` 
+Note: In the latest version 0.3.1 estimation of Kings Variance is not
+included.
 
-## New Function
-
-`ltcs` for analysis of Line x Tester data on single plant basis. 
-
-## Upcoming Functions
-
-* For estimation of drought indices namely TOL, STI, SSPI, YI, YSI etc...
-  
 ## Installation
 
 Install latest package from Github through

@@ -24,6 +24,10 @@ Package website [gpbStat](https://nandp1.github.io/gpbStat/)
 
 ## Version `0.4.0`
 
+* New function `dti` for estimating drought tolerance indices.
+
+## Version `0.4.0`
+
 * New function `ltcs` for single plant Line x Tester analysis.
 
 * Modifications in `ltcmt` so as to include names of traits, lines and testers in results.  

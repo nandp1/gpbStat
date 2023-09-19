@@ -1,46 +1,9 @@
-citHeader("To cite 'gpbStat' in publications use:")
+bibentry(
+  bibtype  = "Manual",
+  title    = "Comprehensive Statistical Analysis of Plant Breeding Experiments",
+  author   = c(person(c("Nandan", "L."), "Patil"),
+                    person(c("Lakshmi", "R."), "Gangavati")),
+  year     = "2020",
+  doi      = "10.5281/zenodo.4070606"
 
-if(!exists("meta") || is.null(meta))
-meta <- packageDescription("gpbStat")
-
-year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
-if (!length(year)) {
- year <- format(packageDate("gpbStat"), "%Y")
- }
-
-vers <- paste("R package version", meta$Version)
-
-citEntry(
-  entry  = "Manual"
-, title  = "Statistical analysis of Plant Breeding data"
-, author = personList(
-  person(
-    c("Nandan", "Patil")
-  ,  email = "tryanother609@gmail.com"
-  , role = c("aut", "cre")
-  , comment = c(ORCID = "0000-0003-0100-9931")
-  )
-, person(
-     c("Lakshmi", "R.", "Gangavati")
-  ,  email = "lakshmirg8@gmail.com "
-  , role = "ctb"
-  )
-    )
-, year = year
-, textVersion = paste(
-       "Nandan Patil, and Lakshmi R Gangavati ("
-      , year
-      , ").  Statistical analysis of Plant Breeding data."
-      , vers
-      , "
-      , "
-      , "https://github.com/nandp1/gpbStat/"
-      , "https://cran.r-project.org/package=gpbStat"
-      , "."
-      , sep = "")
-      , note = {c(paste(vers), "https://github.com/nandp1/gpbStat/" , "https://cran.r-project.org/package=gpbStat")})
-
-
-
-citFooter("This free and open-source software.Please support
-the project by citing the package.")
+)
