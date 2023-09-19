@@ -8,7 +8,6 @@
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
 ![Downloads](http://cranlogs.r-pkg.org/badges/gpbStat)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
-[<img src="https://zenodo.org/badge/8358617.svg" alt="DOI" width="186"/>](https://zenodo.org/badge/latestdoi/8358617)
 <!-- badges: end -->
 
 R package for Statistical analysis of Plant Breeding experiments.
