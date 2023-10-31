@@ -13,7 +13,7 @@
 #' @note The function can handle both replicated and non-replicated data refer the examples.
 #'
 #' @return \item{\code{TOL}}{Stress tolerance.}\item{\code{STI}}{Stress tolerance index.}\item{\code{SSPI}}{Stress susceptibility percentage index.}\item{\code{YI}}{Yield index.}\item{\code{YSI}}{Yield stability index.}\item{\code{RSI}}{Relative
-#' stress index.}\item{\code{MP}}{Mean productivity.}\item{\code{GMP}}{Geometric mean productivity}\item{\code{HMP}}{Harmonic mean.}\item{\code{MRP}}{Mean relative performance.}\item{\code{PYR}}{Percent yield Reduction.}
+#' stress index.}\item{\code{MP}}{Mean productivity.}\item{\code{GMP}}{Geometric mean productivity}\item{\code{HM}}{Harmonic mean.}\item{\code{MRP}}{Mean relative performance.}\item{\code{PYR}}{Percent yield Reduction.}\item{\code{PYR}}{Drought Susceptibility Index.}
 #'
 #' @author Nandan Patil \email{tryanother609@gmail.com}
 #' @details Estimation various Drought Tolerance Indices of genotypes evaluated under stress and non-stress conditions of both replicated and non-replicated data.
@@ -22,6 +22,7 @@
 #' @references
 #' Lamba, K., Kumar M., Singh V., Chaudhary L., Sharma R., Yashveer S. and Dalal, M. S. (2023). Heat stress tolerance indices for identification of the heat tolerant wheat genotypes.
 #'            Scientific Reports, 13(1). https://doi.org/10.1038/s41598-023-37634-8
+#' Fischer, R. and Maurer, R. (1978) Drought Resistance in Spring Wheat Cultivars. I. Grain Yield Responses. Australian Journal of Agricultural Research, 29, 897-912. https://doi.org/10.1071/AR9780897
 #'
 #'@seealso \code{\link[gpbStat]{ltc}, \link[gpbStat]{ltcchk}, \link[gpbStat]{ltcmt}}
 #'
@@ -140,12 +141,17 @@ dti = function(data, environment, genotype, traits, ns, st){
     pyr = Map('*', pyr, 100)
     pyr = lapply(pyr, setNames, 'PYR')
 
-    lis = c(TOL, STI, YSI, yi, rsi, SSPI, mp, gmp, hm, mrp, pyr)
+    dsi1 = Map('-', dfns1, dfst1)
+    dsi = Map('/', dsi1, dfns1)
+    dsi2 = Map('/', xs, xp)
+    dsi = Map('/', dsi, dsi2)
+    dsi = lapply(dsi, setNames, 'DSI')
+
+    lis = c(TOL, STI, YSI, yi, rsi, SSPI, mp, gmp, hm, mrp, pyr, dsi)
 
     mm = map(split(lis, names(lis)), bind_cols)
     mm = lapply(mm, function(x)
-    x = rownames_to_column(x, var = 'GEN'))
+      x = rownames_to_column(x, var = 'GEN'))
 
     return(mm)
-
 }

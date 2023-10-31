@@ -21,7 +21,7 @@ dti(data, environment, genotype, traits, ns, st)
 }
 \value{
 \item{\code{TOL}}{Stress tolerance.}\item{\code{STI}}{Stress tolerance index.}\item{\code{SSPI}}{Stress susceptibility percentage index.}\item{\code{YI}}{Yield index.}\item{\code{YSI}}{Yield stability index.}\item{\code{RSI}}{Relative
-stress index.}\item{\code{MP}}{Mean productivity.}\item{\code{GMP}}{Geometric mean productivity}\item{\code{HMP}}{Harmonic mean.}\item{\code{MRP}}{Mean relative performance.}\item{\code{PYR}}{Percent yield Reduction.}
+stress index.}\item{\code{MP}}{Mean productivity.}\item{\code{GMP}}{Geometric mean productivity}\item{\code{HM}}{Harmonic mean.}\item{\code{MRP}}{Mean relative performance.}\item{\code{PYR}}{Percent yield Reduction.}\item{\code{PYR}}{Drought Susceptibility Index.}
 }
 \description{
 Estimation of Drought Tolerance Indices.
@@ -50,6 +50,7 @@ result2
 \references{
 Lamba, K., Kumar M., Singh V., Chaudhary L., Sharma R., Yashveer S. and Dalal, M. S. (2023). Heat stress tolerance indices for identification of the heat tolerant wheat genotypes.
            Scientific Reports, 13(1). https://doi.org/10.1038/s41598-023-37634-8
+Fischer, R. and Maurer, R. (1978) Drought Resistance in Spring Wheat Cultivars. I. Grain Yield Responses. Australian Journal of Agricultural Research, 29, 897-912. https://doi.org/10.1071/AR9780897
 }
 \seealso{
 \code{\link[gpbStat]{ltc}, \link[gpbStat]{ltcchk}, \link[gpbStat]{ltcmt}}

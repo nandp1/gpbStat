@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 Analyzing the line by tester data single plant observations evaluated in RCBD and Alpha lattice design. All the factors are considered as fixed.
 
-## Example: Analyzing Line x Tester data (crosses) based on single plant observations laid out in Alpha Lattice design.
+w Analyzing Line x Tester data (crosses) based on single plant observations laid out in Alpha Lattice design.
 
 ```{r}
 # Load the package
