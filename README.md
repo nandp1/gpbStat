@@ -12,18 +12,14 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 R package for Statistical analysis of Plant Breeding experiments.
 
-Lastest version `0.4.2` released on 31-10-2023.
+Lastest version `0.4.3` released on 07-12-2023.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
 ## New functions
 
- * `dti` for estimating drought tolerance indices namely TOL, STI, SSPI, YI, YSI, RSI, MP, GMP, HM, MRP, PYR, DSI
+ * `dti` for estimating drought tolerance indices namely TOL, STI, SSPI, YI, YSI, RSI, MP, GMP, HM, MRP, PYR, DSI, SSI
  * `ltcs` for line x tester analysis based on single plant basis.
-
-## Upcoming 
-* New index Stress susceptibility index (SSI) to be included in function `dti`
-* Modifying the formula of RSI index. 
 
 ## Installation
 
