@@ -12,7 +12,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 R package for Statistical analysis of Plant Breeding experiments.
 
-Lastest version `0.4.3` released on 07-12-2023.
+Lastest version `0.4.3` on Github.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
