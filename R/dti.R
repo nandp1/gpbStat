@@ -13,16 +13,19 @@
 #' @note The function can handle both replicated and non-replicated data refer the examples.
 #'
 #' @return \item{\code{TOL}}{Stress tolerance.}\item{\code{STI}}{Stress tolerance index.}\item{\code{SSPI}}{Stress susceptibility percentage index.}\item{\code{YI}}{Yield index.}\item{\code{YSI}}{Yield stability index.}\item{\code{RSI}}{Relative
-#' stress index.}\item{\code{MP}}{Mean productivity.}\item{\code{GMP}}{Geometric mean productivity}\item{\code{HM}}{Harmonic mean.}\item{\code{MRP}}{Mean relative performance.}\item{\code{PYR}}{Percent yield Reduction.}\item{\code{PYR}}{Drought Susceptibility Index.}
+#' stress index.}\item{\code{MP}}{Mean productivity.}\item{\code{GMP}}{Geometric mean productivity}\item{\code{HM}}{Harmonic mean.}\item{\code{MRP}}{Mean relative performance.}\item{\code{PYR}}{Percent yield Reduction.}\item{\code{PYR}}{Drought
+#' Susceptibility Index.}\item{\code{SSP}}{Stress Susceptibility Index.}
 #'
 #' @author Nandan Patil \email{tryanother609@gmail.com}
 #' @details Estimation various Drought Tolerance Indices of genotypes evaluated under stress and non-stress conditions of both replicated and non-replicated data.
 #'
-#'
 #' @references
-#' Lamba, K., Kumar M., Singh V., Chaudhary L., Sharma R., Yashveer S. and Dalal, M. S. (2023). Heat stress tolerance indices for identification of the heat tolerant wheat genotypes.
-#'            Scientific Reports, 13(1). https://doi.org/10.1038/s41598-023-37634-8
+#' Pour‐Aboughadareh, A., Yousefian, M., Moradkhani, H., Moghaddam Vahed, M., Poczai, P., &amp; Siddique, K. H. (2019). ipastic: An online toolkit to estimate plant abiotic stress indices.
+#'            Applications in Plant Sciences, 7(7). https://doi.org/10.1002/aps3.11278
+#' Sabouri, A., Dadras, A.R., Singh V.,  Azar, M., Kouchesfahani, A. S., Taslimi, M. and Jalalifar, R. (2022). Screening of rice drought‑tolerantlines by introducing a new composite selection index and competitive with multivariate methods.
+#'            Scientific Reports, 12. https://doi.org/10.1038/s41598-022-06123-9
 #' Fischer, R. and Maurer, R. (1978) Drought Resistance in Spring Wheat Cultivars. I. Grain Yield Responses. Australian Journal of Agricultural Research, 29, 897-912. https://doi.org/10.1071/AR9780897
+#'
 #'
 #'@seealso \code{\link[gpbStat]{ltc}, \link[gpbStat]{ltcchk}, \link[gpbStat]{ltcmt}}
 #'
@@ -112,7 +115,7 @@ dti = function(data, environment, genotype, traits, ns, st){
     yi = Map('/', dfst1, xs)
     yi = lapply(yi, setNames, 'YI')
 
-    rsi = Map('/', dfns1, dfst1)
+    rsi = Map('/', dfst1, dfns1)
     rsi1 = Map('/', xs, xp)
     rsi = Map('/', rsi, rsi1)
     rsi = lapply(rsi, setNames, 'RSI')
@@ -147,7 +150,16 @@ dti = function(data, environment, genotype, traits, ns, st){
     dsi = Map('/', dsi, dsi2)
     dsi = lapply(dsi, setNames, 'DSI')
 
-    lis = c(TOL, STI, YSI, yi, rsi, SSPI, mp, gmp, hm, mrp, pyr, dsi)
+    ###
+    ssi = Map('-', dfns1, dfst1)
+    ssi1 = Map('/', ssi, dfns1)
+    ssi2 = Map('-', xp, xs)
+    ssi2 = Map('/', ssi2, xp)
+
+    ssi = Map('/', ssi1, ssi2)
+    ssi = lapply(ssi, setNames, 'SSI')
+
+    lis = c(dsi, gmp, hm, mp, mrp, pyr, rsi, ssi, SSPI, STI, TOL, yi, YSI)
 
     mm = map(split(lis, names(lis)), bind_cols)
     mm = lapply(mm, function(x)
