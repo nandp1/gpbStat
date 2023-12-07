@@ -21,6 +21,10 @@ Package Website <https://nandp1.github.io/gpbStat/>
  * `dti` for estimating drought tolerance indices namely TOL, STI, SSPI, YI, YSI, RSI, MP, GMP, HM, MRP, PYR, DSI
  * `ltcs` for line x tester analysis based on single plant basis.
 
+## Upcoming 
+* New index Stress susceptibility index (SSI) to be included in function `dti`
+* Modifying the formula of RSI index. 
+
 ## Installation
 
 Install latest package from Github through
