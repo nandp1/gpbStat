@@ -22,6 +22,10 @@ install.packages("gpbStat")
 ```
 Package website [gpbStat](https://nandp1.github.io/gpbStat/)
 
+## Version `0.4.3`
+
+* New index Stress susceptibility index (SSI) included in function `dti`
+
 ## Version `0.4.2`
 
 * Included new index DSI in function `dti`.
