@@ -8,7 +8,7 @@
 [![Github Code Size](https://img.shields.io/github/languages/code-size/nandp1/gpbStat.svg)](https://github.com/nandp1/gpbStat)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable-1)
-![Downloads](http://cranlogs.r-pkg.org/badges/gpbStat)
+[![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/metan?color=orange)](https://r-pkg.org/pkg/gpbStat)
 [![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
 <!-- badges: end -->
 
