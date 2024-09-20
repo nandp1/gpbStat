@@ -12,7 +12,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![](https://cranlogs.r-pkg.org/badges/grand-total/gpbStat)](https://cran.r-project.org/package=gpbStat)
 <!-- badges: end -->
 
-R package for Statistical analysis of Plant Breeding experiments.
+R package for Statistical analysis of Plant Breeding experiments. 
+Authors : Nandan L. Patil & Lakshmi Gangavati
 
 Lastest version `0.4.3` on Github.
 
