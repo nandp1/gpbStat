@@ -16,7 +16,7 @@ R package for Statistical analysis of Plant Breeding experiments.
 
 Authors : **Nandan L. Patil & Lakshmi Gangavati**
 
-Lastest version `0.4.3` on Github.
+Lastest version `0.4.4` on Github.
 
 Package Website <https://nandp1.github.io/gpbStat/>
 
