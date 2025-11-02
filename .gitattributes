@@ -1,2 +1,3 @@
 vignettes/** linguist-vendored=false
 vignettes/** linguist-documentation=false
+*.R -linguist-detectable
