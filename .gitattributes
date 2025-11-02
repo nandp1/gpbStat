@@ -1,1 +1,2 @@
-*.rb linguist-language=R
+vignettes/** linguist-vendored=false
+vignettes/** linguist-documentation=false
