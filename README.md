@@ -14,6 +14,8 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 
 R package for Statistical analysis of Plant Breeding experiments. 
 
+## Upcoming functions for analysis of Multi Environment Line x Tester data for multiple traits. 
+
 Lastest version `0.4.4` on Github.
 
 Package Website <https://nandp1.github.io/gpbStat/>
@@ -478,3 +480,4 @@ result3
 #> sh   7.639091 6.182359       86.17855
 #> gy  55.793159 3.434970       40.77187
 ```
+
